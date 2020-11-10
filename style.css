@@ -1,0 +1,265 @@
+.container {
+    max-height: 10%;
+    margin-bottom: 10vh; 
+    position: relative;
+    text-align: center;
+    color: blanchedalmond;
+}
+.firstimage {
+  float: left;
+  position: relative;
+  margin-bottom: 10vh;
+}
+.otherfirstimage {
+  float: right;
+  position: relative;
+  margin-bottom: 10vh;
+  transform: scaleX(-1);
+}
+
+/*
+need to select all parts of top image then preform tasks below
+.firstimage:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.otherfirstimage:hover {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+*/
+.top-right {
+  font-style: oblique;
+  text-decoration-color: rgb(212, 241, 245);
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 8px;
+  margin: auto;
+  width: 100%;
+}
+
+.under-top-right {
+    text-align: center;
+    font-style: oblique;
+    text-decoration-color: rgb(212, 241, 245);
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 10vh;
+    margin: auto;
+    width: 100%;
+}
+
+.top-center {
+  font-style: oblique;
+  /*background: -webkit-linear-gradient(left, rgb(2, 224, 253),rgb(1, 253, 198),rgb(146, 248, 11),yellow,orange, rgb(207, 247, 62), rgb(238, 252, 255));;*/
+  background: -webkit-linear-gradient(left,rgb(255, 115, 0),orange,rgb(247, 223, 2),rgb(247, 223, 2),yellow,white, yellow,rgb(247, 223, 2),rgb(247, 223, 2),orange, rgb(255, 115, 0));;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 20vh;
+  margin: auto;
+  width: 100%;
+}
+/*button 1 and button 2 refer to the next and prev button for the slider */
+#button1 {
+   background-color: aquamarine;
+   text-align: center;
+   border-radius: 50%;
+   margin-top: 4vh;
+   margin-left: 5vw;
+   padding: 16px;
+   margin-bottom: 2vh;
+}
+#button2 {
+   background-color: aquamarine;
+   text-align: center;
+   border-radius: 50%;
+   float: right;
+   margin-top: 4vh;
+   margin-right: 5vw;
+   padding: 16px;
+   margin-bottom: 2vh;
+}
+
+body {
+    background-color: rgb(24, 4, 44);
+    margin: 0;
+    background-image: url("https://i.pinimg.com/736x/f4/03/71/f40371285801e21c49c7f7e5379c503f.jpg");
+}
+/*pic and active are essential css for the slider at top of the cv content */
+.pic {
+  display: none;
+  max-width: 50vw; 
+  max-height: 100vh; 
+  overflow: hidden;
+}
+#active {
+  display: inline-block;
+  position: relative;
+}
+/*below is the main container for the cv content */
+.w3-container {
+    background-color: rgb(128, 140, 177);
+    float: right;
+    width: 60%;
+    height: fit-content;
+    /* height was 150vh */
+    margin-right: 5%;
+    margin-top: 0vh;
+    border-radius: 2vh;
+    margin-bottom: 5vh;
+    /*align-content: center; doesnt work
+    /*margin-top: fixed; */
+}
+
+/* Section decorating the nav bar below
+ list-style-type: none; removes bullet point dots from list items*/
+li.nav_list {
+    list-style-type: none;
+    /*spaces out the nav bar width*/
+    margin: 0 2vw;
+    /*font size in relation to the nav bar height*/
+    font-size: 3vh;
+}
+/*This removes the underline from the list items, decorated nav bar text here */
+a {
+    text-decoration: none;
+    color: rgb(24, 4, 44);
+    padding: 2vw;
+    font-family: 'Book Antiqua' 
+}
+
+a:hover{
+  /*background-image: url("https://t4.ftcdn.net/jpg/01/97/87/97/360_F_197879719_pyUSdXvf2L0cFs7Tq8Cq3LobtM2Ts0RY.jpg"); */
+  display: block;
+  height: auto;
+  width: auto;
+  background-image: radial-gradient(ellipse closest-side at center, red, yellow, transparent);
+
+}
+/*The top of nav bar decorates the CV sections title of nav bar */
+#topOfNavBar {
+    text-decoration: none;
+    color: rgb(24, 4, 44);
+    padding: 2vw;
+    font-family: 'Book Antiqua';
+    display: inline-block;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-left: 3vw;
+}
+
+nav {
+    width: 25%;
+    line-height: 400%;
+    background-color: rgb(128, 140, 177);
+    float: left;
+    margin-left: 5%;
+    margin-top: 0vh;
+    margin-top: fixed;
+    border-radius: 2vh;
+}
+
+ul.nav_ul {
+    margin: 3vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+#button3 {
+   background-color: aquamarine;
+   padding: 0.75vw;
+   cursor: pointer;
+   color: black;
+   display: block;
+   /*this put the button on the left*/
+   align-self: flex-start;
+   font-family: inherit; /* Important for vertical align on mobile phones */
+   margin: 0; /* Important for vertical align on mobile phones */
+} 
+
+.dropdown-content {
+  overflow: hidden;
+  display: none;
+}
+
+/*shows the dropdown list on click */
+.show {display: block;}
+
+
+/*change the layout of the navigation bar for all the screens 
+that have a width less or equal than 500px*/
+
+@media only screen and (max-width: 500px) {
+  /*shows elements in a column*/
+  ul{
+    flex-direction: column;
+  }
+  
+  /* deletes margin on top or bottom of the a tag*/
+  li.nav_list{
+    margin: 0;
+  }
+ /* makes sure that the a tag will take the entire screen*/
+  a{
+    display: block;
+  }
+}
+@media only screen and (max-width: 500px) {
+   
+   button{
+     /*makes the button visible*/
+     display: block;
+     
+     /*since we are here, we can style it a little bit!*/
+     padding: 2vw;
+     font-size: 3vh;
+     background-color: aquamarine;
+     border: none;
+     
+     /*outline none removes the default blue border that appears anytime you click on the button*/
+     outline: none;
+     
+     cursor: pointer;
+   }
+}
+
+.header {
+  font-size: 3vh;
+  text-decoration: underline;
+  text-decoration-color: rgba(44, 44, 97, 0.863);
+}
+.mini-header {
+  font-size: 2.5vh;
+  text-decoration: underline;
+  text-decoration-color: rgba(44, 44, 97, 0.863);
+}
+.mainHeader {
+  font-size: 4vh;
+  text-decoration: underline;
+  text-decoration-color: rgba(44, 44, 97, 0.863);
+}
+ul.second_list {
+  list-style-type: square;
+}
+
+#experience {
+  height: fit-content;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0.5vw;
+}
+
+#education {
+  height: fit-content;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0.5vw;
+}
+
+#skillsAndInterests {
+  height: fit-content;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0.5vw;
+}
