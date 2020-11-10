@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="script.js"></script>
+<title>CV</title>
+<link rel="stylesheet" href="style.css">
+<div class="container">
+  <!-- dark one<img class="firstimage" src="https://t4.ftcdn.net/jpg/02/76/08/07/240_F_276080724_hltnCyDjcqAyRtLzDYo3T2jXbBtCD7fl.jpg" style="width: 100%;"/> -->
+  <!--<img class="firstimage" src="https://i.pinimg.com/736x/f4/03/71/f40371285801e21c49c7f7e5379c503f.jpg" style="width: 100%;max-height: 60vh;"/>-->
+  <img class="firstimage" src="https://c4.wallpaperflare.com/wallpaper/450/948/1024/colors-explosion-colorful-powder-wallpaper-thumb.jpg" style="width: 50%;max-height: 50vh;"/>
+  <img class="otherfirstimage" src="https://c4.wallpaperflare.com/wallpaper/450/948/1024/colors-explosion-colorful-powder-wallpaper-thumb.jpg"  style="width: 50%;max-height:50vh;"/>
+  <h1 class="top-right">Hannah Rothwell</h1>
+  <h2 class="under-top-right">Nice to meet you <span id="username"></span>!</h2>
+  <script>
+     let userName = prompt("Hello there! What is your name?");
+     document.getElementById('username').innerHTML = userName;
+  </script>
+  <h3 class="top-center">
+      Please allow me to introduce myself. I am a chemistry graduate currently looking for new challenges <br>
+      and opportunities. I have recently taken an interest in coding and so decided to see if I could </br>
+      build my cv as a website from scratch. I have enjoyed the process and hope you enjoy reading it. <br>
+  </h3>
+</div>
+</head>
+
+<body>
+<script src="script.js"></script>
+<!--the link to the dropdown icon below for nav bar-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<!-- nav for navigation bar, ul for unordered list see link below to make nav bar
+  https://itnext.io/how-to-create-a-responsive-navigation-bar-with-html-css-and-jquery-step-by-step-tutorial-9c780b58479f -->
+ <nav>
+  <!--put id photo here
+  <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://media2.s-nbcnews.com/j/newscms/2019_39/3021711/190923-cat-pet-stock-cs-1052a_43851bc99a0a206de61747e48fbb9216.nbcnews-fp-1200-630.jpg" alt="" /></span>
+  -->
+   <ul class="nav_ul">
+     <li class="nav_list">
+     <span id="topOfNavBar">CV Sections</span>
+     <div class="dropdown">
+       <button onclick="myFunction()" class="dropbtn" id="button3">
+       <i class="fa fa-caret-down"></i>
+       </button> 
+     </div>
+     </li>
+     
+     <div id="myDropdown" class="dropdown-content">
+
+       <li class="nav_list">
+         <a href="#skillsAndInterests">Skills and Interests</a>
+       </li>
+
+       <li class="nav_list">
+         <a href="#experience">Experience</a>
+       </li>
+
+       <li class="nav_list">
+          <a href="#education">Education</a>
+       </li>
+    
+    </div>
+  </ul>
+
+  </nav>
+
+<!--smooth scrolling element-->
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<!--cv sections below linked by the id's-->
+<div class="w3-container">
+
+  <div id="skillsAndInterests">
+    <p class="mainHeader">Skills and Interests</p>
+    <button id="button1" onclick="change(0)">Prev</button>
+    <button id="button2" onclick="change(1)">Next</button>
+    <div id="picContainer">
+        <img src="files/img-1.jpg" style="left:30%" class="pic" id="active">
+        <img src="files/img-2.jpg" style="left:8%" class="pic">
+        <img src="files/img-3.jpg" style="left:20%" class="pic">
+        <img src="files/img-4.jpg" style="left:20%" class="pic">
+        <img src="files/img-5.jpg" style="left:8%" class="pic">
+    </div>
+  </div>
+ 
+  <div id="experience">
+    <p class="mainHeader">Experience</p>
+
+    <p class="header">
+      Laboratory scientist at Catapult Medicines Discovery, August 2020- Present
+    </p>
+    <ul class="second_list">
+     <li>Accuracy and attention to detail is important to ensure the correct result of each COVID-19 test is always delivered.</li>
+     <li>Quickly learning new skills such as how to operate a Hamilton robotic liquid handler.</li>
+    </ul>
+    <p class="header">
+      Laboratory support scientist at Alderley Analytical, July 2019- September 2019
+    </p>
+    <ul class="second_list">
+      <li>Independent - I managed my own workload and enjoyed finding new tasks and responsibilities. This included covering my colleague’s workload (processing samples, blank matrices and analytical standards upon arrival) for the week he was off. I also taught other scientists how to complete sample processing.</li>
+      <li>Great working attitude - applauded in my placement review. I am always keen to surpass expectations and find improvements. For example, creating a spreadsheet to track expiration dates of analytical standards so they could be easily identified, found and disposed of upon expiration.</li>
+      <li>Working to GLP/GCP standards - This included keeping accurate records of instrument calibrations and checking data in the QC department.</li>
+      <li>Applying knowledge and learning from experience - I assisted scientists in making calibration curves for HPLC analysis and was introduced to TQ-MS/MS analysis. I also learned about bioanalytical method development, which I later applied to my project at University.</li>
+    </ul>
+    <p class="mini-header">Highlights of role:</p>
+    <ul class="second_list">
+      <li>Being called a pipette wizard by my colleague; I could calibrate all her pipettes without her noticing despite us both working in the same laboratory and office.</li>
+      <li>Bringing in my bakes, including a cake dedicated to the company on completion of the placement.</li>
+    </ul>
+    <p class="header">
+      Teaching assistant at Manchester Metropolitan University, June 2019- July 2019
+    </p>
+    <ul class="second_list">
+      <li>Laboratory maintenance; setting up experiments and attending a technical services conference.</li>
+      <li>Collaborating with colleagues to organise a schedule every day.</li>
+    </ul>
+    <p class="header">
+      Fume cupboard operative at Fluorochem, September 2018- February 2019
+    </p>
+    <ul class="second_list">
+      <li>As part of my role, I processed research chemicals through an analytical laboratory, selecting appropriate tests and solvents per product and analysing the results.</li>
+      <li>Using the FRANK software for; waste admin, relocating or adjusting stock, reporting problems and checking label alerts. I quickly adapted to additional ways of using FRANK for new tasks during my employment such as prepacking and stock-bin management.</li>
+    </ul>
+    <p class="mini-header">Highlights of role:</p>
+    <ul class="second_list">
+      <li>When the health and safety manager used to joke that he could eat his dinner out of my fume cupboard (I liked to keep it spotless).</li>
+    </ul>
+  </div>
+
+  <div id="education">
+    <p class="mainHeader">Education</p>
+
+    <p class="header">2016- 2020, 1st class BSc (Hons) Chemistry including a sandwich year in industry, Manchester Metropolitan University</p>
+    <p class="mini-header">Project and personal development (coursework grade 76.8%)</p>
+    <ul class="second_list">
+      <li>Reviewing scientific literature to achieve the aim of my project - to investigate the release kinetics of antibiotics from mesoporous silica nanoparticles in different media.</li>
+      <li>Synthesising and characterising mesoporous silica nanoparticles - monodispersed spherical particles with a regular internal hexagonal array. These particles were characterised using NMR, FTIR and XRD analysis.</li>
+      <li>Analytical method development - to determine the amount of antibiotic being released.</li>
+      <li>Using kinetic models - The Higuchi model and the Korymeyers-peppas model were used to determine the mechanism of antibiotic drug release from the pores.</li>
+    </ul>
+    <p class="mini-header">Advanced physical and inorganic chemistry (coursework grade: 75%, exam grade: 95%)</p>
+    <ul class="second_list">
+      <li>Personal best: Achieving a grade of 83% during a quantum mechanics class test. This required problem solving skills and covered topics such as of quantum tunnelling, 1D and 3D Schrödinger equation for a particle in a box or on a ring and Hückel molecular orbital theory.</li>
+    </ul>
+    <p class="mini-header">Advanced bioinorganic and organic chemistry (coursework grade: 75%, exam grade: 94%)</p>
+    <ul class="second_list">
+      <li>Personal best: Achieving a grade of 84% during a class test based on retrosynthetic problem solving, the bioinorganic chemistry of haemoglobin and organometallic reactions.</li>
+    </ul>
+    <p class="mini-header">Analytical (coursework grade: 72%, exam grade: 88%)</p>
+    <ul class="second_list">
+      <li>Personal best: Achieving a grade of 80% on the multivariate statistical analysis in class test. This included problems surrounding principal component analysis and cluster analysis.</li>
+    </ul>
+    <p class="header">Additional skills</p>
+    <p class="mini-header">Advanced use of software</p>
+    <ul class="second_list">
+      <li>Scigress - molecular modelling software which allows chemists to design drugs, calculate molecular properties such as quantitative structure-activity relationships and virtually dock ligands into proteins.</li>
+      <li>Microsoft Word - creating professional laboratory reports.</li>
+      <li>Microsoft Excel - analysing data, including the use of statistical functions, significance testing and using ANOVA functions.</li>
+      <li>Chemdraw - creating virtual molecules to use in diagrams or with other software.</li>
+      <li>Minitab - to carry out cluster analysis and principal component analysis.</li>
+    </ul>
+    <p class="mini-header">Presentations and teamwork</p>
+    <ul class="second_list">
+      <li>Critical marked presentations – presenting is a skill that I have worked hard to improve on throughout University. A highlight for me this year was taking the lead in my group and confidently presenting our bioinorganic laboratory work. This presentation was later graded 70%.</li>
+      <li>Giving presentations within larger groups and by myself.</li>
+      <li>Creating presentations on Microsoft PowerPoint. For my dissertation project I created an informative PowerPoint presentation that was awarded a grade of 80%.</li>
+    </ul>
+  </div>
+   
+</div>
+
+
+</body>
+</html>
